@@ -1,0 +1,58 @@
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <script src="../js/jquery-3.1.0.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/pouchdb-5.4.5.js"></script>       
+  <script src="../js/pouchdb-5.4.5.min.js"></script>       
+  <script src="../js/index1.js"></script>
+  <script src="../js/pouchdb.upsert.js"></script>
+  <style>
+        .btn-default {width:70%;}      
+fieldset {
+    width: 125px;
+}
+label {
+    display: inline;
+}
+input[type=checkbox] {
+    display: inline;
+}
+  </style>
+  </head>    
+<body>
+<div class="jumbotron">
+</div>
+      <div id="outPopUp10">   
+        <button type="button" class="btn btn-default">AVAILABILITY</button><br><br>&nbsp;&nbsp;&nbsp;&nbsp;                    
+        <a onClick="prev1()"><span class="glyphicon glyphicon-arrow-left"></span></a>
+        <a href="#" onClick="values()" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-ok-sign"></span> OK
+        </a>
+        <a onClick="next1()" id ="next"><span class="glyphicon glyphicon-arrow-right"></span></a><br><br>                            
+        <div class="well well-lg" >            
+        <fieldset>
+        <div>
+        <label>
+        <input type="checkbox" class="Checkbox" value="Public">Public</label><br><br>            
+        </div>         
+        <div>       
+        <label><input type="checkbox" class="Checkbox" value="Friends">Friends
+        </label></div><br>
+        <div>
+        <label>
+        <input type="checkbox" class="Checkbox" value="SpecificFriends">Specific Friends
+        </label></div><br>
+        <div>
+        <label>
+        <input type="checkbox" class="Checkbox" value="Group">Group 
+        </label></div><br>
+        <div><label>
+        <input type="checkbox" class="Checkbox" value="Only Me">Only me
+        </label></div><br>       
+        </fieldset>
+            </div>
+       </div>
+</body>
+</html>
