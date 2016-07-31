@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+   
+        <style>
+
+        span { 
+    display: inline-block; 
+    position: absolute;
+}
+body {
+    background-repeat: no-repeat;   
+   background-image: url("http://www.wsllpaper.com/wp-content/uploads/2013/07/Sunsite-Forest-HD-Desktop-Wallpaper.jpg");
+    }
+     </style>
+    </head>
+    <body>
+    <script type="text/javascript">
+        window.onload = function() {
+        document.getElementById('next').addEventListener('click', function (e) {    	  
+        var items = ["http://big.assets.huffingtonpost.com/cattreadmillfn.gif","http://www.catgifpage.com/gifs/182.gif" ,"https://media.giphy.com/media/freTElrZl4zaU/giphy.gif","http://lovelace-media.imgix.net/uploads/448/1839fc40-5ce6-0133-8fb2-0e17bac22e39.gif?", "https://i.ytimg.com/vi/DuHpioIGxFs/hqdefault.jpg","http://cdn.resharelist.com/media/funny-cat-gifs.jpg"];
+        var item = items[Math.floor(Math.random()*items.length)];
+	  document.getElementById("next").src = item;
+          var snd = new Audio("cat_meow_x.wav"); // buffers automatically when created
+            snd.play();
+    	});
+    };
+     function moveDiv() {
+    var $span = $("#random");
+    
+    $span.fadeOut(1000, function() {
+        var maxLeft = $(window).width() - $span.width();
+        var maxTop = $(window).height() - $span.height();
+        var leftPos = Math.floor(Math.random() * (maxLeft + 1))
+        var topPos = Math.floor(Math.random() * (maxTop + 1))    
+        $span.css({ left: leftPos, top: topPos }).fadeIn(10);
+    });
+};
+
+moveDiv();
+setInterval(moveDiv, 90);   
+
+    </script>
+    
+<div id="container">
+    <span id="random">
+        <img src="http://www.rulez-t.info/images/2008/07/10/cats_10.jpg" id="next" alt="Smiley face" height="220" width="220">
+    </span>
+</div>
+
+    </body>
+</html>
