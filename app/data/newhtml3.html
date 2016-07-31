@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <script src="../js/jquery-3.1.0.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/index.css">
+  <script src="../js/pouchdb-5.4.5.js"></script>       
+  <script src="../js/pouchdb-5.4.5.min.js"></script>       
+  <script src="../js/index1.js"></script>
+  <script src="../js/pouchdb.upsert.js"></script>
+  <style>
+  .btn-default {width:40%;}
+  </style>
+    </head>
+    <body>
+<div class="jumbotron">
+</div>
+        <div id="outPopUp1">    
+        <button type="button"  class="btn btn-secondary ">SET YOUR SCHEDULE</button><br><br>
+        <button type="button"  class="btn btn-default ">9 AM</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" id ="nine" contenteditable=true class="btn btn-default">TBD</button>
+        <br><br>
+        <button type="button" class="btn btn-default ">10 AM</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" id ="ten" contenteditable=true class="btn btn-default">TBD</button>        
+        <br><br>
+        <button type="button" class="btn btn-default ">11 AM</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" id ="eleven" contenteditable=true class="btn btn-default">TBD</button><br><br>
+        <button type="button" class="btn btn-default ">12 PM</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" id ="twelve" contenteditable=true class="btn btn-default">TBD</button><br><br>
+        <button type="button"  class="btn btn-default">1 PM</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" id ="thirteen" contenteditable=true class="btn btn-default">TBD</button><br><br>
+        <button type="button" class="btn btn-default ">2 PM</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" id ="fourteen" contenteditable=true class="btn btn-default">TBD</button><br><br>
+        <a href ="#" onClick="prev()"><span class="glyphicon glyphicon-arrow-left"></span></a>                  
+        <a href="#" onClick="setschedule()" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-ok-sign"></span> OK
+        </a>
+        <a href ="#" onClick="view()"><span class="glyphicon glyphicon-arrow-right"></span></a><br>
+        <a data-toggle="modal" href="#myModal"><span class="glyphicon glyphicon-question-sign"></span></a><br><br>          
+        </div>        
+        <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">HELP</h4>
+        </div>
+        <div class="modal-body">
+          <p>Set the schedule by clicking on the Button. </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Full Tutorial</button>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+            <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">HELP</h4>
+        </div>
+        <div class="modal-body">
+          <p>Add friends by clicking the + sign. Also customize your list by adding groups.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Full Tutorial</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        
+    </body>
+</html>

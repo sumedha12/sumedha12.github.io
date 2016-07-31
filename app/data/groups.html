@@ -1,0 +1,61 @@
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/index.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="../js/pouchdb-5.4.5.js"></script>       
+  <script src="../js/pouchdb-5.4.5.min.js"></script>       
+  <script src="../js/index1.js"></script>
+  <script src="../js/pouchdb.upsert.js"></script>
+  <style>
+ .btn-default {width:120%;}
+   label {
+    display: inline;
+}
+input[type=checkbox] {
+    display: inline;
+}
+.btn-default {width:100%;}      
+
+fieldset {
+    width: 125px;
+}
+      
+  .dropdown-menu {
+  left: 50%;
+  right: auto;
+  text-align: center;
+  transform: translate(-50%, 0);
+}
+  </style>
+    <script type="text/javascript">
+</script>
+</head>
+<body onload="group()">
+    <div class="jumbotron">        
+    </div>
+ <div id="outPopUp10">                            
+    <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">All Contacts
+       <span class="caret"></span>
+    </button>    
+    <ul class="dropdown-menu" id="demolist" role="menu" aria-labelledby="menu1">
+    </ul>
+  </div>
+            <br><br>
+            <input type="text" name="fname" id="fname" placeholder="Add"><br><br>
+            <a href ="#"><span   class="glyphicon glyphicon-arrow-left"></span></a>                      
+            <a onClick="addgroup()"><span class="glyphicon glyphicon-plus"></span></a>          
+            <a id ="next"><span class="glyphicon glyphicon-arrow-right"></span></a>                      
+            <br><br>            
+            <div class="well well-lg">
+            </div>
+ </div>   
+</body>
+</html>
