@@ -1,5 +1,5 @@
 var login_name;
-var db = new PouchDB('new');
+var db = new PouchDB('kittens1');
 db.info().then(function (info) {
 console.log(info);
 });
@@ -104,9 +104,9 @@ function selectfriend()
                 console.log(doc);
         }    
         db.upsert(x, myDeltaFunction).then(function () {
-        alert("success");
+        //alert("success");
         }).catch(function (err) { 
-        alert("notsuccess");        
+        //alert("notsuccess");        
 })
 }
 function specfriend()
@@ -204,7 +204,7 @@ function avail()
 {
        var e = window.event,
        btn = e.target || e.srcElement;
-       alert(btn.id);
+       //alert(btn.id);
    var x = location.search;
 var x = x.replace("?", "");     
 db.get(x).then(function (doc) {
@@ -256,9 +256,9 @@ function setschedule()
             console.log(doc);
         }
         db.upsert(x, myDeltaFunction).then(function () {
-        alert("success");
+        //alert("success");
           }).catch(function (err) {
-          alert("notsuccess")        
+          //alert("notsuccess")        
 })
 }
 function selfriends()
@@ -268,7 +268,7 @@ function selfriends()
     db.get(x).then(function (doc) {
     if(doc.slength!==0)
     {
-        alert("not zero");
+        //alert("not zero");
     for(i=0;i<doc.slength;i++)
     $(".well").append("<button button class='btn btn-default'  name= newbutton> "+doc.spec_friend[i]+" </button> <br><br>");          
     return doc;        
@@ -283,7 +283,7 @@ function selfriends()
     }).catch(function (err) {
   console.log(err);});  
     }    
-function timealign()
+function timealign1()
     {        
     var x = location.search;
     var x = x.replace("?", "");     
@@ -336,8 +336,8 @@ function schedule()
         document.getElementById("ten1").innerHTML = doc.ten;
         document.getElementById("eleven1").innerHTML = doc.eleven;
         document.getElementById("twelve1").innerHTML = doc.twelve;
-        document.getElementById("thirteen1").innerHTML =doc.Thirteen;
-        document.getElementById("fourteen1").innerHTML =doc.Fourteen;       
+        document.getElementById("thirteen1").innerHTML =doc.thirteen;
+        document.getElementById("fourteen1").innerHTML =doc.fourteen;       
        }).catch(function (err) {
      console.log(err);});
     }
@@ -378,7 +378,7 @@ db.get(x).then(function (doc) {
     $('.well').append('<fieldset>');
    for(i=0;i<len;i++)  
     {                
-    $('.well').append('<div> <label id ="checkbox" class="checkbox-inline"><input type="checkbox"class="checkbox-inline" id= "user" name="user" value='+doc.Friends[i]+'>'+doc.Friends[i]+'</label></div>');                
+    $('.well').append('<div><label id ="checkbox" class="checkbox-inline"><input type="checkbox"class="checkbox-inline" id= "user" name="user" value='+doc.Friends[i]+'>'+doc.Friends[i]+'</label></div>');                
     }
     $('.well').append('</fieldset>');
     var glen = doc.glen;    
@@ -403,12 +403,14 @@ function group_mem()
 {
 var items = document.getElementsByClassName('checkbox-inline');
 for (var i = 0; i < items.length; i++)
-        document.getElementsByClassName("checkbox-inline")[i].style.display = 'none';
+document.getElementsByClassName("checkbox-inline")[i].style.display = 'none';
 var x = location.search;
 var x = x.replace("?", "");     
 db.get(x).then(function (doc) {
 var groupname = document.getElementById("menu1").innerHTML;
-alert(groupname);
+len=doc.length;
+    
+//alert(groupname);
 var groupuser = [];
 var no;
 for(var i=0;i<doc.glen;i++)
@@ -416,16 +418,16 @@ for(var i=0;i<doc.glen;i++)
     if(doc.group[i][0] == groupname)
         {
         no=i;   
-        alert(no);
+        //alert(no);
         }        
     }
 var len = doc.group[no].length;
-alert(len);
 for(var i=1;i<len;i++)
 {
     groupuser.push(doc.group[no][i]);
     $('.well').append('<label id ="checkbox" class="checkbox-inline"><input type="checkbox" name="user" value='+doc.group[no][i]+'>'+doc.group[no][i]+'</label>');                
-}}).catch(function (err) {
+}
+}).catch(function (err) {
   console.log(err);
 });  
 }
@@ -453,9 +455,9 @@ $.each($("input[name='user']:checked"), function(){
         console.log(doc);
         }   
         db.upsert(x, myDeltaFunction).then(function () {            
-            alert("success");            
+            alert("Group Created!");            
         }).catch(function (err) { 
-        alert("notsuccess");
+        //alert("notsuccess");
           console.log(err);
    })
 }
