@@ -14,6 +14,10 @@ document.getElementById("menu1").innerHTML=$(this).text();
 group_mem();
 });
 };
+function logout()
+{
+        window.location.href = "../index.html";
+}
 function login()
         {                                   
         login_name =    document.querySelector('#email').value;
