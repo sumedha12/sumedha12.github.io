@@ -203,10 +203,19 @@ body{
             
 	    image1.src=item;  
             
-    }        
+    }       
+    function play()
+        {
+        myAudio = new Audio('bird.wav'); 
+myAudio.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+myAudio.play();
+        }
         </script>
 </head>
-<body>
+<body onload="play()">
     <img src="img/overlay12.gif" id="pajaro1" onClick="change('pajaro1')" class="piopio">	
     <img src="img/overlay12.gif" id="pajaro2"  onClick="change('pajaro2')" class="piopio">	
     <img src="img/overlay12.gif" id="pajaro3" onClick="change('pajaro3')" class="piopio">	
