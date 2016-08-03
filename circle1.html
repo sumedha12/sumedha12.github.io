@@ -32,7 +32,16 @@ body {
 overflow:hidden;
 }
 </style>
-<body>
+<script>
+function play()
+        {
+            var snd = new Audio("Incoming.wav");
+            			snd.play();
+        }
+
+      
+</script>
+<body onload="play">
 <div class="w3-content" style="max-width:500px">
   <img class="mySlides w3-animate-fading" src="http://www.copronason.com/ego/images/TheGHungryGhostOfBloodCastle_24x30.jpg" style="width:100%">
 </div>
