@@ -33,13 +33,16 @@ overflow:hidden;
 }
 </style>
 <script>
-{
-      myAudio = new Audio('Incoming.wav'); 
-      myAudio.addEventListener('ended', function() {
+function play()
+        {
+        myAudio = new Audio('Incoming.wav'); 
+myAudio.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
 }, false);
 myAudio.play();
+
+
 </script>
 <body onload="play()">
 <div class="w3-content" style="max-width:500px">
