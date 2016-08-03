@@ -326,8 +326,8 @@ function schedule()
         document.getElementById("tens").innerHTML = doc.ten;
         document.getElementById("elevens").innerHTML = doc.eleven;
         document.getElementById("twelves").innerHTML = doc.twelve;
-        document.getElementById("thirteens").innerHTML =doc.Thirteen;
-        document.getElementById("fourteens").innerHTML =doc.Fourteen;       
+        document.getElementById("thirteens").innerHTML =doc.thirteen;
+        document.getElementById("fourteens").innerHTML =doc.fourteen;       
        }).catch(function (err) {
      console.log(err);});
  
